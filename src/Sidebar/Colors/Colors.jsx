@@ -1,4 +1,4 @@
-import './Color.css'
+import './Colors.css'
 
 const Colors = () => {
   return (
