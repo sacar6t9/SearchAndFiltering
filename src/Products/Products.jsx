@@ -8,15 +8,16 @@ const Products = () => {
         <section className="card">
           <img
             src=" https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg"
-            alt="shoes"
+            alt="shoes" className="card-image"
           />
           <div className="card-details">
             <h1 className="card-title">Shoes</h1>
             <section className="card-reviews">
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
+              <AiFillStar className="rating-star" />
+              <AiFillStar className="rating-star" />
+              <AiFillStar className="rating-star" />
+              <AiFillStar className="rating-star" />
+    
             <span className="total-review">4</span>
             </section>
             <section className="card-price">
@@ -24,7 +25,7 @@ const Products = () => {
                 <del> $300</del> 200
               </div>
               <div className="bag">
-                <BsFillBagHeartFill/>
+                <BsFillBagHeartFill className="bag-icon"/>
               </div>
             </section>
           </div>
