@@ -2,9 +2,17 @@
 import './Recommendend.css'
 const Recommendend = () => {
   return (
-    <div>
-<h1>Recommendend</h1>      
-    </div>
+    <> 
+    <h2 className='recommended-title'>recommended</h2>
+    <div className="recommended-flex">
+    <button className='btns'>AllProducts</button>
+    <button className='btns'>Nike</button>
+    <button className='btns'>Adidas</button>
+    <button className='btns'>Puma</button>
+    <button className='btns'>Vans</button>
+    </div> 
+
+    </>
   )
 }
 
