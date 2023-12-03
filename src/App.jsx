@@ -8,7 +8,7 @@ import products from "./db/data";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
-  //input
+  //inputfilter
   const [query, setQuery] = useState("");
   const handleInputChange = (event) => {
     setQuery(event.target.value);
@@ -16,7 +16,11 @@ const App = () => {
   const filteredItems = products.filter((product) =>
     product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() !== -1)
   );
-  
+  //radio filter
+  const handleChange=event=>{
+    setSelectedCategory(event.target.value)
+  }
+  //button filter
   return (
     <>
       <Sidebar />
