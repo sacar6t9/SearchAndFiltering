@@ -43,7 +43,7 @@ const App = () => {
       );
     }
     return filteredProducts.map(({img,title,star,reviews,prevPrice,newPrice})=>{
-      <Card key={Math.random()}
+      return(<Card key={Math.random()}
       img={img}
       title={title} 
       star={star}
@@ -51,18 +51,19 @@ const App = () => {
       prevPrice={prevPrice}
       newPrice={newPrice}
 
-      />
+      />)
     })
   }
   const result=filteredData(products,selectedCategory,query)
   return (
     <>
       <Sidebar handleChange={handleChange} />
-      <Nav />
-      <Recommendend />
-      <Products />
+      <Nav query={query} handleChange={handleChange} />
+      <Recommendend handleClick={handleClick}/>
+      <Products result={result}/>
     </>
   );
 };
 
 export default App;
+//13746
