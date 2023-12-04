@@ -54,9 +54,10 @@ const App = () => {
       />
     })
   }
+  const result=filteredData(products,selectedCategory,query)
   return (
     <>
-      <Sidebar />
+      <Sidebar handleChange={handleChange} />
       <Nav />
       <Recommendend />
       <Products />
