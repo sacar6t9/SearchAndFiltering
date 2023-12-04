@@ -15,7 +15,8 @@ const App = () => {
     setQuery(event.target.value);
   };
   const filteredItems = products.filter((product) =>
-    product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() !== -1)
+    product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() )!== 
+    -1
   );
   //radio filter
   const handleChange = (event) => {
@@ -58,7 +59,7 @@ const App = () => {
   return (
     <>
       <Sidebar handleChange={handleChange} />
-      <Nav query={query} handleChange={handleChange} />
+      <Nav query={query} handleInputChange={handleInputChange} />
       <Recommendend handleClick={handleClick}/>
       <Products result={result}/>
     </>
@@ -66,4 +67,3 @@ const App = () => {
 };
 
 export default App;
-//13746
